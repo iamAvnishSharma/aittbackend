@@ -912,6 +912,7 @@ def run(rq):
 
     #creating a table for storing divisions timetable
     mycursor.execute("CREATE TABLE IF NOT EXISTS Division_tt (division VARCHAR(255), timeslot VARCHAR(255),  Monday VARCHAR(255), Tuesday VARCHAR(255),  Wednesday VARCHAR(255),  Thursday VARCHAR(255),  Friday VARCHAR(255),  Saturday VARCHAR(255))")
+    mycursor.execute("TRUNCATE TABLE Division_tt")
 
     #retrieving data from the data frames and storing into list
     divi = []
@@ -956,7 +957,7 @@ def run(rq):
 
     #creating a table for storing teachers timetable
     mycursor.execute("CREATE TABLE IF NOT EXISTS Teachers_tt (teacher VARCHAR(255), timeslot VARCHAR(255),  Monday VARCHAR(255), Tuesday VARCHAR(255),  Wednesday VARCHAR(255),  Thursday VARCHAR(255),  Friday VARCHAR(255),  Saturday VARCHAR(255))")
-
+    mycursor.execute("TRUNCATE TABLE Teachers_tt")
     #retrieving data from the data frames and storing into list
     teach = []
     timeslot = []
@@ -1000,7 +1001,7 @@ def run(rq):
 
     #creating a table for storing teachers timetable
     mycursor.execute("CREATE TABLE IF NOT EXISTS CR_tt (CR VARCHAR(255), timeslot VARCHAR(255),  Monday VARCHAR(255), Tuesday VARCHAR(255),  Wednesday VARCHAR(255),  Thursday VARCHAR(255),  Friday VARCHAR(255),  Saturday VARCHAR(255))")
-
+    mycursor.execute("TRUNCATE TABLE CR_tt")
     #retrieving data from the data frames and storing into list
     crs = []
     timeslot = []
